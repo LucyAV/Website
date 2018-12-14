@@ -1,0 +1,126 @@
+/* Font Declaration */
+@font-face {
+    font-family: MohaveRegular;
+    src: url("../font/Mohave-Regular.ttf");
+}
+
+
+
+/* Main Site */
+html, body {
+    height: 100%;
+/*    min-height: 100%;*/
+}
+body {
+    margin: 0;
+    font-family: MohaveRegular;
+    font-size: 100%;
+/*    background-color: #c8c7c6;*/
+}
+
+
+
+/* Fullscreen Video */
+#videoDiv {
+    min-height: 100%;
+/*    width: 100%;*/
+/*    overflow: hidden;*/
+/*    display: block;*/
+}
+#videoTag {
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
+
+
+
+/* Logo */
+#lucyLogo {
+    position: absolute;
+    background-image: url("../img/lucy_logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 100%;
+    height: 25%;
+    z-index: 1;
+}
+
+
+
+/* Car and System-Structure */
+#lucyCarOLD {
+    position: absolute;
+    background-image: url("../img/lucy_car.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+#lucy_car {
+	width: 960px;
+	height: 100%;
+	padding-top: 20px;
+}
+#lucy_system_structure {
+	width: 960px;
+	height: 100%;
+}
+
+
+
+/* Content */
+.contentDark, .contentLight {
+    position: relative;
+    text-align: center;
+    font-size: large;
+    line-height: 1.4em;
+    text-align: justify;
+/*    margin-top: -20px;*/
+    /* Horizontal Scrollbar wtf */
+}
+.contentDark {
+    background: #303c50;
+    color: #c8c7c6;
+}
+.contentLight {
+    background: #c8c7c6;
+    color: #303c50;
+}
+
+.flex-container h1 {
+    padding-top: 30px;
+}
+
+
+
+/* Flex styles */
+div.flex-container {
+    display: flex;
+    position: relative;
+    margin: auto;
+    max-width: 960px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+	padding-bottom: 30px;
+}
+div.flex-container-img {
+    display: flex;
+    position: relative;
+    margin: auto;
+    max-width: 960px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+div.flex-container > div {
+    flex-grow: 1;
+    align-self: center;
+    flex-basis: 0;
+}

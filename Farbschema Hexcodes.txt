@@ -1,0 +1,8 @@
+Red:
+b41f2a
+
+Blue:
+303c50
+
+Gray:
+c8c7c6
