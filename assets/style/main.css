@@ -51,19 +51,7 @@ body {
 
 
 
-/* Car and System-Structure */
-#lucyCarOLD {
-    position: absolute;
-    background-image: url("../img/lucy_car.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
+/* Car and system-structure */
 #lucy_car {
 	width: 960px;
 	height: 100%;
@@ -76,21 +64,51 @@ body {
 
 
 
+/* Change language button */
+.languageChoice {
+	font-family: MohaveRegular;
+	font-size: 22px;
+	background-color: #303c50;
+	color: #c8c7c6;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	margin-top: 10px;
+	padding: 14px 16px;
+	width: 25%;
+}
+
+
+
+/* Team div, image, hr */
+.teamDiv {
+	text-align: center;
+}
+.teamImg {
+	border-radius: 50%;
+	width: 50%;
+}
+.teamHR {
+	width: 50%;
+	opacity: 0.5;
+}
+
+
+
 /* Content */
 .contentDark, .contentLight {
     position: relative;
-    text-align: center;
     font-size: large;
     line-height: 1.4em;
     text-align: justify;
 /*    margin-top: -20px;*/
     /* Horizontal Scrollbar wtf */
 }
-.contentDark {
+.contentDark, .contentDark a {
     background: #303c50;
     color: #c8c7c6;
 }
-.contentLight {
+.contentLight, .contentLight a {
     background: #c8c7c6;
     color: #303c50;
 }

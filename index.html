@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
 		<title>Lucy - Autonomous Vehicle</title>
+		<meta charset="UTF-8">
+		
+        <meta name="description" content="Lucy is an autonomous vehicle that can navigate to a chose destination all by itself.">
+        <meta name="keywords" content="Lucy, Autonomous, Vehicle, Selbstfahrend, HTL, Moessingerstrasse">
+        <meta name="author" content="Yannik Rauter, Felix Holz">
 
+		<!-- Link styles -->
 		<link rel=stylesheet type="text/css" href="assets/style/main.css">
 		<link rel=stylesheet type="text/css" href="assets/style/scroll_hint.css">
+		
+		<!-- Link jQuery and JavaScripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="javascript.js"></script>
 		
 		<link rel="shortcut icon" href="assets/favicon/favicon.png">
 	</head>
 	<body>
 		<div id="videoDiv">
+			<!-- Background video -->
 			<video autoplay muted loop id="videoTag">
-				<source src="assets/media/lucy_background_trailer.mp4" type="video/mp4">
+				<source src="assets/media/lucy_background_trailer2.webm" type="video/mp4">
 			</video>
+			
+			<!-- Logo -->
 			<div id="lucyLogo"></div>
 
+			<!-- Scroll hint -->
 			<div class="container">
 				<div class="chevron"></div>
 				<div class="chevron"></div>
@@ -23,7 +36,7 @@
 				<span class="text">SCROLL DOWN</span>
 			</div>
 		</div>
-
+		
 		<div class="contentDark">
 			<div class="flex-container">
 				<h1>Die Idee</h1>
@@ -45,16 +58,29 @@
 		
 		<div class="contentLight">
 			<div class="flex-container">
-				<h1>Was ist "Lucy"</h1>
-				<p>
+				
+				<h1 id="headGer">Was ist "Lucy"</h1>
+				<h1 id="headEng" style="display: none">What is "Lucy"</h1>
+				<p id="descGer">
 					"Lucy" ist ein autonomes Fahrzeug, welches selbstständig zu einem gewählten Ziel 
-					fahren kann. Wenn auf einer Karte ein Ziel gewählt werden soll, muss dieses Gebiet 
+					fahren kann. Wenn auf einer Karte ein Ziel gewählt wird, muss dieses Gebiet 
 					lediglich zuvor digital erfasst werden. Die Erfassung geschieht zusätzlich simultan 
 					beim Durchqueren von Räumen oder Gebäuden. Dies wird unter anderem mithilfe eines 
 					LiDAR (Light Detection and Ranging) Sensors erreicht. Das Fahrzeug bewegt sich 
 					daraufhin automatisch zur Destination, ohne dabei mit statischen oder beweglichen 
 					Objekten zu kollidieren.
 				</p>
+				<p id="descEng" style="display: none">
+					"Lucy" is an autonomous vehicle, which can navigate to a chosen destination
+					independently. In order to choose a target on a map, the designated area needs to be
+					digitally mapped first. The mapping process happens simultaneously while traversing
+					rooms or buildings. This is done by means of a LiDAR (Light Detection and Ranging)
+					Sensor. The vehicle then moves to its destination autonomously, without crashing
+					into static or moving objects.
+				</p>
+				
+				<button class="languageChoice" onclick="changeLanguage('german');">Deutsch</button>
+				<button class="languageChoice" onclick="changeLanguage('english');">English</button>
 			</div>
 		</div>
 
@@ -87,8 +113,41 @@
 		</div>
 
 		<div class="contentDark">
+			<div class="flex-container">
+				<h1>Projektteam</h1>
+			</div>
+			<div class="flex-container">
+				<div class="teamDiv">
+					<img class="teamImg" src="assets/img/rauter.png"/>
+					<p>Yannik Rauter</p>
+					<hr class="teamHR">
+					<p>
+						Entwicklung von Assistenzsystemen für manuelles und autonomes Fahren
+					</p>
+				</div>
+				<div class="teamDiv">
+					<img class="teamImg" src="assets/img/wischounig.png"/>
+					<p>
+						Prof. Dipl.-Ing. Dr. techn.<br>
+						Daniel Wischounig-Strucl
+					</p>
+					<hr class="teamHR">
+					<p>
+						Projektbetreuer
+					</p>
+				</div>
+				<div class="teamDiv">
+					<img class="teamImg" src="assets/img/holz.png"/>
+					<p>
+						Felix Holz
+					</p>
+					<hr class="teamHR">
+					<p>
+						Implementation von autonomen Fahrfunktionen
+					</p>
+				</div>
+			</div>
 			<div class="flex-container-img">
-				<h1>Concept Art</h1>
 				<img src="assets/img/lucy_car.svg" id="lucy_car">
 			</div>
 		</div>
@@ -115,8 +174,10 @@
 
 		<div class="contentDark">
 			<div class="flex-container">
-				<p>
-					Impressum etc.
+				<p style="text-align: center">
+					&copy; 2019 by Yannik Rauter &amp; Felix Holz<br>
+					Project developed for and at <a href="www.htl-klu.at">HTL M&ouml;ssingerstra&szlig;e</a><br>
+					Find more projects like this at <a href="projects.htl-klu.at">projects.htl-klu.at</a>
 				</p>
 			</div>
 		</div>
